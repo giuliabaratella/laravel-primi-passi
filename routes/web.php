@@ -18,4 +18,10 @@ Route::get('/', function () {
         'text' => 'Hello World!',
     ];
     return view('home', $data);
-});
+})->name('home');
+Route::get('/bonus', function () {
+    $data = [
+        'text' => 'Bonus!',
+    ];
+    return view('bonus', $data);
+})->name('bonus');
